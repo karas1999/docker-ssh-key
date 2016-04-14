@@ -11,7 +11,7 @@ The use can only login with it's ssh key file. The password login is disabled by
 2.Clone this repo:
 
 ```shell
-git clone aaa.git path_to_docker-ssh
+git clone https://github.com/karas1999/docker-ssh-key.git path_to_docker-ssh
 ```
 
 3.Build the image:
