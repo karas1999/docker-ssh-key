@@ -25,11 +25,14 @@ RUN mkdir -m 755 /var/run/sshd
 # Add ssh key directory.
 RUN mkdir /home/admin/.ssh
 
-# Copy the default start.sh file to /vol/start. 
-# You can override this file by mount another folder to /vol
-VOLUME /vol
-ADD ./start.sh /vol/start/start.sh
+# Copy the default start.sh file to /data/start. 
+# You can override this file by mount another folder to /data
+VOLUME /data
+ADD ./start.sh /data/start/start.sh
+
+# Add my public key
+ADD ./authorized_keys /home/admin/.ssh/authorized_keys
 
 EXPOSE 22
 
-CMD bash -C /vol/start/start.sh
+CMD bash -C /data/start/start.sh

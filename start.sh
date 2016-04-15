@@ -1,6 +1,11 @@
 #!/bin/bash
 # This is our first script.
 
-echo 'Please mount your own directory to /vol'
+echo 'Begin start.sh...'
 
-echo 'Visit https://github.com/karas1999/docker-ssh-key.git to see details.'
+# You can add any command you need here:
+
+# Start ssh server
+/usr/sbin/sshd -D
+
+echo 'start.sh ended.'
