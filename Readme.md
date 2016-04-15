@@ -4,7 +4,7 @@ An SSH image which only allows key login.
 
 ## ADVANTAGES
 
-1. The use can only login with it's ssh key file. The password login is disabled by default.
+1. The user can only login with it's ssh key file. The password login is disabled by default.
 
 2. Use the outside VOLUME to control the image start command, don't need to rebuild the image any more.  
 
