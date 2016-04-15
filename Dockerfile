@@ -27,7 +27,7 @@ RUN mkdir /home/admin/.ssh
 
 # Copy the default start.sh file to /vol/start. 
 # You can override this file by mount another folder to /vol
-RUN mkdir -p /vol/start
+VOLUME /vol
 ADD ./start.sh /vol/start/start.sh
 
 EXPOSE 22
